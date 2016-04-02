@@ -1,0 +1,192 @@
+h1,h2
+{
+	text-align: center;
+	font-family: 'Lobster Two', cursive;
+}
+
+p{
+	font-weight: 300;
+	font-size: 1.3em;
+	display: inline-block;
+	text-align : justify;
+	color: #2C3E50;
+}
+
+.titreindex{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	color:#2C3E50;
+}
+
+.titredanse{
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	color:white;
+}
+
+#thumbnail1{
+	margin-top: 100px;
+}
+
+body {
+  color:black;
+    
+}
+
+.jumbotron {
+	margin-top: 60px;
+	background-color: #F7F9FF;
+}
+
+.carousel{
+
+	padding-top: 70px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+}
+
+.carousel-inner > .item > img{
+       width:1200px;
+       height:400px;
+}
+
+.well {
+	margin-top:60px;
+	background-color: #F7F9FF;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.form-group1 {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 125px;
+}
+
+.col-md-4 {
+	background-color
+}
+
+.btn-danger{
+	margin-bottom: px;
+
+}
+
+.navbar-default{
+	background-color: #2C3E50;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	margin-bottom: 10
+}
+
+
+.navbar-brand{
+	font-family: 'Lobster Two', cursive;
+}
+
+.navbar-default .navbar-brand{
+	color:#FFFFFF;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus{
+	color:#AFE6F5;
+	background-color: transparent;
+}
+
+
+.navbar-default .navbar-nav> .active >a,
+.navbar-default .navbar-nav> .active > a:hover,
+.navbar-default .navbar-nav> .active > a:focus {
+	color: #FFFFFF;
+	background-color: #1A242F;
+}
+
+.navbar-default .navbar-nav> li > a:hover,
+.navbar-default .navbar-nav> li > a:focus {
+	color: #18BC9C;
+	background-color: transparent;
+}
+
+
+
+.navbar-default .navbar-nav> li > a {
+	color:white;
+}
+
+#boutonindex{
+	margin-bottom: 80px;
+}
+
+#informations{
+	margin-top: 10px;
+}
+
+#carousel-index {
+  background-color: white;
+}
+
+#annuaire {
+	margin-bottom: 60px;
+}
+
+#moyen{
+	background-color:silver;
+}
+
+body {
+    -moz-transition: background-color 1s ease-in;
+    -webkit-transition: background-color 1s ease-in;
+    -o-transition: background-color 1s ease-in;
+    -ms-transition: background-color 1s ease-in;
+    transition: background-color 1s ease-in;
+}
+
+.index-visible{ background: #554C4A; }
+.danse-visible{ background: #6C4846; }
+
+#bienvenue{
+	margin-bottom: 70px;
+	color: #2C3E50;
+	font-size: 3.4em;
+}
+
+#hrbienvenue{
+	border-color:#2C3E50; 
+}
+
+.texteconnection{
+
+	margin-right: 60px;
+}
+
+#inscription{
+
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+#selectbasic{
+	width: 300px;
+}
+
+}
+#select{
+	width: 300px;
+}
+
+#indexcontainer{
+	margin-bottom: 50px;
+}
+
+#boutonseconnecter{
+	margin-left: 60px;
+}
+
+.checkbox {
+	margin-left: 27%;
+}

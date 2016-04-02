@@ -1,0 +1,76 @@
+<form class="form-horizontal" method="post" action="{{ path('user_add') }}" id="add">
+	{{ form_errors(form) }}
+	<fieldset>
+		<legend align="center"></legend>
+		<div class="form-group">
+			{{ form_label(form.nom, "Nom ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.nom) }}
+			<div class="col-md-6">
+				{{ form_widget(form.nom, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.prenom, "Prénom ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.prenom) }}
+			<div class="col-md-6">
+			{{ form_widget(form.prenom, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.dateNaissance, "Date de naissance ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.dateNaissance) }}
+			<div class="col-md-6">
+				{{ form_widget(form.dateNaissance, {'attr': {'class': 'date'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.adresse, "Adresse", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.adresse) }}
+			<div class="col-md-6">
+				{{ form_widget(form.adresse, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.email, "E-mail ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.email) }}
+			<div class="col-md-6">
+				{{ form_widget(form.email, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.telephone, "Téléphone ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.telephone) }}
+			<div class="col-md-6">
+				{{ form_widget(form.telephone, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.site, "Site internet ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.site) }}
+			<div class="col-md-6">
+				{{ form_widget(form.site, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend align="center"></legend>
+		<div class="form-group">
+			{{ form_label(form.username, "Login", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.username) }}
+			<div class="col-md-6">
+				{{ form_widget(form.username, {'attr': {'class': 'form-control input-md'}}) }}
+			</div>
+		</div>
+		<div class="form-group">
+			{{ form_label(form.password, "Mot de passe ", {'label_attr': {'class': 'col-md-4 control-label'}}) }}
+			{{ form_errors(form.password) }}
+			<div class="col-md-6">
+				{{ form_widget(form.password, {'attr': {'class': 'form-control input-md'}}) }}
+				<br/>
+				<button type="submit" class="btn btn-md btn-primary" align="center" id="buttonformul">Valider&nbsp;
+					<span class="glyphicon glyphicon-thumbs-up"></span></button>
+			</div>
+		</div>
+		{{ form_rest(form) }}
+	</fieldset>
+</form>

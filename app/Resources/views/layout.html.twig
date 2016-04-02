@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+
+	{% block stylesheets %}
+
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    	<link type="text/css" href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    	<link type="text/css" href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+    	<link href="{{ asset('css/select2.min.css') }}" rel="stylesheet"/>
+		<script src="{{ asset('js/select2.min.js') }}"></script>
+		<script src="{{ asset('js/footable.all.min.js') }}"></script>
+		<script src="{{ asset('js/javascript.js') }}"></script>
+
+	{% endblock %}
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <title>Carnet d'adresse en ligne</title>
+</head>
+<body data-spy="scroll" data-target="#navigationbar">
+
+	{% block body %}
+	{% endblock %}
+
+	<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-text pull-left">
+				<p><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>&nbsp;Carnet d'adresse en ligne </p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block page_body  %}
+
+    <div class ="container-fluid">
+        <div class ="row">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="col-md-offset-1 col-md-7">
+                <div class="panel panel-default" id="informations">
+                    <div class="panel-heading">
+                        <h3 class="titreindex">Vos informations&nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
+                    </div>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Nom</td>
+                                <td>{{ app.user.getNom() }}</td>
+                            </tr>
+                            <tr>
+                                <td>Prénom</td>
+                                <td>{{ app.user.getPrenom() }}</td>
+                            </tr>
+                            <tr>
+                                <td>Date de naissance</td>
+                                <td>{{ app.user.getDateNaissance()|date("d/m/Y") }}</td>
+                            </tr>
+                            <tr>
+                                <td>Adresse</td>
+                                <td>{{ app.user.getAdresse() }}</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail</td>
+                                <td>{{ app.user.email }}</td>
+                            </tr>
+                            <tr>
+                                <td>Téléphone</td>
+                                <td>{{ app.user.getTelephone() }}</td>
+                            </tr>
+                            <tr>
+                                <td>Site internet</td>
+                                <td>{{ app.user.getSite() }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br/>
+            <div class="col-md-3">
+                <h3 class="titreindex">Modifier ses informations</h3>
+                <p>Vous pouvez modifier les informations associées à votre compte si celles exposées dans le récapitulatif vous semble erronées ou obsolètes.</p>
+                <center><a href="#modifier" data-toggle="modal" class="btn btn-danger" id="boutonindex"> Modifier </a></center>
+            </div>
+        </div>
+    </div>
+
+    {% render(controller("UserBundle:User:edit")) %}
+
+{% endblock %}

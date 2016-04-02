@@ -1,0 +1,24 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block page_body %}
+
+	<div class="container-fluid" id="inscription">
+		<section id="inscription">
+			<div class="row">
+		  		<h1 id="bienvenue"> Bienvenue sur notre carnet d'adresse en ligne </h1>
+		  		<hr id ="hrbienvenue" width="80%">	  	
+		  	</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h1 class="bienvenue">Pas encore inscrit ?</h1>
+
+					{% render(controller("UserBundle:User:add")) %}
+
+				</div>
+			</section>
+		</div>
+	</div>
+
+	{% render(controller("FOSUserBundle:Security:login")) %}
+
+{% endblock %}
