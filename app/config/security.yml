@@ -9,8 +9,10 @@ security:
         ROLE_ADMIN:       ROLE_USER
 
     access_control:
-           - { path: ^/profile, roles: ROLE_USER }
-           - { path: ^/contacts, roles: ROLE_USER }
+           - { path: ^/home, role: IS_AUTHENTICATED_ANONYMOUSLY }
+           - { path: ^/home/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+           - { path: ^/user/, role: ROLE_USER }
+
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
@@ -29,7 +31,7 @@ security:
             form_login:
                 login_path: fos_user_security_login
                 check_path: fos_user_security_check
-                default_target_path: /account
+                default_target_path: /user/account
             logout:
                 path:       fos_user_security_logout
                 target:     /home

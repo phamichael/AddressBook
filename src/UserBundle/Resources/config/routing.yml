@@ -3,25 +3,25 @@ user_homepage:
     defaults: { _controller: UserBundle:Default:index }
 
 user_add:
-    path:     /add
+    path:     /home/add
     defaults: { _controller: UserBundle:User:add }
 
 user_edit:
-    path:     /edit
+    path:     /user/edit
     defaults: { _controller: UserBundle:User:edit }
 
 contact_add:
-    path:     /contact
+    path:     /user/add
     defaults: { _controller: UserBundle:Contact:add }
 
 contact_delete:
-    path:     /delete
+    path:     /user/delete
     defaults: { _controller: UserBundle:Contact:delete }
 
 user_account:
-    path:     /account
+    path:     /user/account
     defaults: { _controller: UserBundle:User:account }
 
 user_contacts:
-    path:     /contacts
+    path:     /user/contacts
     defaults: { _controller: UserBundle:User:contacts }

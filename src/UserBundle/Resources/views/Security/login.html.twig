@@ -6,7 +6,7 @@
 
 	{% if error %}
 
-  	  <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+		<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 
 	{% endif %}
 
@@ -17,27 +17,26 @@
 					<div class="modal-header">
 						<h4>Connexion</h4>
 					</div>
-					<form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal">
+					<form action="{{ path('fos_user_security_check') }}" method="post" class="form-horizontal">
     					<input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
     					<div class="form-group">
-    						<label for="username" class="col-sm-3 control-label">Login</label>
+    						<label for="username" class="col-sm-3 control-label">{{ 'Login '|trans({},'FOSUserBundle') }}</label>
     						<div class="col-sm-9">
    	 							<input type="text" id="username" name="_username" class="form-control" value="{{ last_username }}" required="required"/>
    	 						</div>
    	 					</div>
    	 					<div>
-    						<label for="password" class="col-sm-3 control-label">Mot de passe</label>
+    						<label for="password" class="col-sm-3 control-label">{{ 'Mot de passe '|trans({},'FOSUserBundle') }}</label>
     						<div class="col-sm-9">
     							<input type="password" id="password" name="_password" class="form-control" required="required"/>
     						</div>
     					</div>
-    					<div class="checkbox">
-    						<label for="remember_me"> 
-    							<input type="checkbox" id="remember_me" name="_remember_me" value="on"/> Se souvenir de moi ?
-    						</label>
+    					<div class="alignement">
+							<label for="remember_me">{{ 'Se souvenir de moi '|trans({}, 'FOSUserBundle') }}</label>
+							<input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
     					</div>
-              <div class="modal-footer">
-                <a class="btn btn-danger" data-dismiss="modal">Fermer</a>
+						<div class="modal-footer">
+                			<a class="btn btn-danger" data-dismiss="modal">Fermer</a>
     						<button type="submit" id="_submit" name="_submit" class="btn btn-primary">Connexion</button>
     					</div>
     				</div>
