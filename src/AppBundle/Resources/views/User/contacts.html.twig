@@ -10,55 +10,56 @@
             <br/>
             <div class="col-md-offset-1 col-md-8">
                 <div class="panel panel-default" id="informations">
-                <div class="panel-heading">
-                    <h3 class="titreindex">Liste contacts&nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
+                    <div class="panel-heading">
+                        <h3 class="titreindex">Liste contacts&nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
+                    </div>
+                    <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Rechercher...">
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-show-toggle="false" data-page-size="8" data-filter="#filter">
+                        <thead>
+                            <tr>
+                                <th>Numéro</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Adresse</th>
+                                <th>E-mail</th>
+                                <th>Téléphone</th>
+                                <th>Site internet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for contact in contacts %}
+
+                            <tr>
+                                <td>{{ contact.id }}</td>
+                                <td>{{ contact.nom }}</td>
+                                <td>{{ contact.prenom }}</td>
+                                <td>{{ contact.adresse }}</td>
+                                <td>{{ contact.email }}</td>
+                                <td>{{ contact.telephone }}</td>
+                                <td>{{ contact.site }}</td>
+                            </tr>
+
+                        {% endfor %}
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5">
+                                    <ul class="pagination"></ul>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
-                <input type="text" class="form-control input-sm m-b-xs" id="filter1" placeholder="Rechercher...">
-                <table class="footable table table-stripped toggle-arrow-tiny" data-show-toggle="false" data-page-size="8" data-filter="#filter1">
-                    <thead>
-                        <tr>
-                            <th>Numéro</th>
-                            <th data-toggle="true">Nom</th>
-                            <th>Prénom</th>
-                            <th data-hide="all">Adresse</th>
-                            <th data-hide="all">E-mail</th>
-                            <th data-hide="all">Téléphone</th>
-                            <th data-hide="all">Site internet</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    {% for contact in contacts %}
-
-                        <tr>
-                            <td>{{ contact.getId() }}</td>
-                            <td>{{ contact.getNom() }}</td>
-                            <td>{{ contact.getPrenom() }}</td>
-                            <td>{{ contact.getAdresse() }}</td>
-                            <td>{{ contact.email }}</td>
-                            <td>{{ contact.getTelephone() }}</td>
-                            <td>{{ contact.getSite() }}</td>
-                        </tr>
-
-                    {% endfor %}
-
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="5">
-                                <ul class="pagination pull-right"></ul>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
             </div>
-        </div>
-        <br/>
-        <div class="col-md-2" id="contacts">
-            <h3 class="titreindex">Gérer contacts</h3>
-            <p>Vous pouvez ajouter ou supprimer un contact en cliquant sur les boutons ci-dessous.</p>
-            <center><a href="#ajouter" data-toggle="modal" class="btn btn-danger" id="boutonindex"> Ajouter </a>
-                <a href="#supprimer" data-toggle="modal" class="btn btn-danger" id="boutonindex"> Supprimer </a></center>
+            <br/>
+            <div class="col-md-2" id="contacts">
+                <h3 class="titreindex">Gérer contacts</h3>
+                <p>Vous pouvez ajouter ou supprimer un contact en cliquant sur les boutons ci-dessous.</p>
+                <center><a href="#ajouter" data-toggle="modal" class="btn btn-danger" id="boutonindex"> Ajouter </a>
+                    <a href="#supprimer" data-toggle="modal" class="btn btn-danger" id="boutonindex"> Supprimer </a></center>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-8">
@@ -71,7 +72,7 @@
                         <thead>
                             <tr>
                                 <th>Numéro</th>
-                                <th data-toggle="true">Nom</th>
+                                <th>Nom</th>
                                 <th>Prénom</th>
                             </tr>
                         </thead>
@@ -80,9 +81,9 @@
                             {% for user in users %}
 
                                 <tr>
-                                    <td>{{ user.getId() }}</td>
-                                    <td>{{ user.getNom() }}</td>
-                                    <td>{{ user.getPrenom() }}</td>
+                                    <td>{{ user.id }}</td>
+                                    <td>{{ user.nom }}</td>
+                                    <td>{{ user.prenom }}</td>
                                 </tr>
 
                             {% endfor %}
@@ -91,7 +92,7 @@
                         <tfoot>
                             <tr>
                                 <td colspan="5">
-                                    <ul class="pagination pull-right"></ul>
+                                    <ul class="pagination"></ul>
                                 </td>
                             </tr>
                         </tfoot>
@@ -104,5 +105,7 @@
     {% render(controller("UserBundle:Contact:add")) %}
 
     {% render(controller("UserBundle:Contact:delete")) %}
+
+    <script> $('.footable').footable(); </script>
 
 {% endblock %}
