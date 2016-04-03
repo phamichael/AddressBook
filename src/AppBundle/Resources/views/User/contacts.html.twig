@@ -13,18 +13,18 @@
                 <div class="panel-heading">
                     <h3 class="titreindex">Liste contacts&nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
                 </div>
-                <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Rechercher...">
+                <input type="text" class="form-control input-sm m-b-xs" id="filter1" placeholder="Rechercher...">
                 <table class="footable table table-stripped toggle-arrow-tiny" data-show-toggle="false" data-page-size="8" data-filter="#filter1">
                     <thead>
-                    <tr>
-                        <th>Numéro</th>
-                        <th data-toggle="true">Nom</th>
-                        <th>Prénom</th>
-                        <th data-hide="all">Adresse</th>
-                        <th data-hide="all">E-mail</th>
-                        <th data-hide="all">Téléphone</th>
-                        <th data-hide="all">Site internet</th>
-                    </tr>
+                        <tr>
+                            <th>Numéro</th>
+                            <th data-toggle="true">Nom</th>
+                            <th>Prénom</th>
+                            <th data-hide="all">Adresse</th>
+                            <th data-hide="all">E-mail</th>
+                            <th data-hide="all">Téléphone</th>
+                            <th data-hide="all">Site internet</th>
+                        </tr>
                     </thead>
                     <tbody>
 
@@ -44,11 +44,11 @@
 
                     </tbody>
                     <tfoot>
-                    <tr>
-                        <td colspan="5">
-                            <ul class="pagination pull-right"></ul>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td colspan="5">
+                                <ul class="pagination pull-right"></ul>
+                            </td>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
@@ -67,16 +67,12 @@
                         <h3 class="titreindex">Annuaire&nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true"></span></h3>
                     </div>
                     <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Rechercher...">
-                    <table class="footable table table-stripped toggle-arrow-tiny" data-show-toggle="false" data-page-size="8" data-filter="#filter" id="tabprofesseur">
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-show-toggle="false" data-page-size="8" data-filter="#filter">
                         <thead>
                             <tr>
                                 <th>Numéro</th>
                                 <th data-toggle="true">Nom</th>
                                 <th>Prénom</th>
-                                <th data-hide="all">Adresse</th>
-                                <th data-hide="all">E-mail</th>
-                                <th data-hide="all">Téléphone</th>
-                                <th data-hide="all">Site internet</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,10 +83,6 @@
                                     <td>{{ user.getId() }}</td>
                                     <td>{{ user.getNom() }}</td>
                                     <td>{{ user.getPrenom() }}</td>
-                                    <td>{{ user.getAdresse() }}</td>
-                                    <td>{{ user.email }}</td>
-                                    <td>{{ user.getTelephone() }}</td>
-                                    <td>{{ user.getSite() }}</td>
                                 </tr>
 
                             {% endfor %}

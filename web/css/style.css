@@ -18,12 +18,6 @@ p{
 	color:#2C3E50;
 }
 
-.titredanse{
-	text-align: center;
-	font-family: 'Oswald', sans-serif;
-	color:white;
-}
-
 #thumbnail1{
 	margin-top: 100px;
 }
@@ -159,8 +153,8 @@ body {
 	border-color:#2C3E50; 
 }
 
-.texteconnection{
-
+.connection{
+	margin-top: 90px;
 	margin-right: 60px;
 }
 
